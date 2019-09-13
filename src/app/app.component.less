@@ -1,5 +1,7 @@
 @primary-color: #8FBE00;
 @link-blue: #31A9FF;
+@heading-gray: #716B70;
+@light-gray: #666666;
 @primary-font: 'Source Sans Pro', sans-serif;
 
 body, html {
@@ -20,30 +22,59 @@ body, html {
       -o-background-size: cover;
       background-size: cover;
     }
-    
-    .text-area {
-      position: relative;
-      top: 20vh;
-      margin-left: 20px;
-      
-      h2 {
-        margin-bottom: -20px;
-      }
-  
-      
-      @media screen and (max-width: 500px) {
+    .overlay {
+      background-color: rgba(255, 255, 255, .5);
+      height: 95vh;
+      .text-area {
+        position: relative;
+        top: 20vh;
+        margin-left: 20px;
         h2 {
-          font-size: 33px;
-          margin-bottom: -5px;
-          color:#FFF;
-          font-weight: 400;
+          margin-bottom: -20px;
         }
-        h1 {
-          font-size: 55px;
-          line-height: 50px;
-          color:#FFF;
-          font-weight: 700;
+    
+        
+        @media screen and (max-width: 500px) {
+  
+          h2 {
+            font-size: 33px;
+            margin-bottom: -5px;
+            font-weight: 400;
+          }
+          h1 {
+            font-size: 55px;
+            line-height: 50px;
+            font-weight: 700;
+            margin-top: 10px;
+          }
         }
+      }
+    } 
+  } // End of Image Hero
+
+.information-bar  {
+  padding-right: 30px;
+  padding-left: 30px;
+  .left {
+    color: @heading-gray;
+    @media screen and (max-width: 500px) {
+      width: 100%
+    }
+
+    span {
+      font-weight: 900;
+    }
+    h3 {
+      font-weight: 400;
+      @media screen and (max-width: 500px) {
+        font-size: 26px;
       }
     }
-  } // End of Image Hero
+  }
+  .right {
+    color: @light-gray;
+    @media screen and (max-width: 500px) {
+      width: 100%
+    }
+  }
+} // End of Information Bar
