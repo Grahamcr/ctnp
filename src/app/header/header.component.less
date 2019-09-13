@@ -33,15 +33,20 @@
         button {
             margin-left: 20px;
         }
+    }
+    .rmenu {
+        position: absolute;
+        right: -30px;
+        top: 1px;
 
-        .responsive-menu {
+        img {
+            height: 50px;
+            fill: @primary-color;
+            cursor: pointer;
+        }
+
+        @media screen and (min-width: 500px) {
             display: none;
-            position: absolute;
-            right: 20px;
-            
-            @media screen and (max-width: 500px) {
-                display: block;
-            }
         }
     }
 }

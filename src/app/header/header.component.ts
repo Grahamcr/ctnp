@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MenuService } from '../menu-service';
 
 @Component({
   selector: 'app-header',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  constructor(private menuService: MenuService) { }
 
   ngOnInit() {
   }
 
+  showMenu() {
+    this.menuService.menuEmitter.next(true);
+  }
 }
