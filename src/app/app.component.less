@@ -1,0 +1,49 @@
+@primary-color: #8FBE00;
+@link-blue: #31A9FF;
+@primary-font: 'Source Sans Pro', sans-serif;
+
+body, html {
+    padding: 0px;
+    margin: 0px;
+    font-family: @primary-font;
+}
+
+
+.image-hero {
+    width:100%;
+    height: 95vh;
+    margin-top: -40px;
+    &.super {
+      background: url(../assets/images/super.jpg) no-repeat center center fixed; 
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+    }
+    
+    .text-area {
+      position: relative;
+      top: 20vh;
+      margin-left: 20px;
+      
+      h2 {
+        margin-bottom: -20px;
+      }
+  
+      
+      @media screen and (max-width: 500px) {
+        h2 {
+          font-size: 33px;
+          margin-bottom: -5px;
+          color:#FFF;
+          font-weight: 400;
+        }
+        h1 {
+          font-size: 55px;
+          line-height: 50px;
+          color:#FFF;
+          font-weight: 700;
+        }
+      }
+    }
+  } // End of Image Hero

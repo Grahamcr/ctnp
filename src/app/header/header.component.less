@@ -1,0 +1,47 @@
+@primary-color: #8FBE00;
+@link-blue: #31A9FF;
+
+.header {
+    width: 100%;
+    height: 60px;
+    border-bottom: 3px solid @primary-color;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    img {
+        width: 200px;
+        margin-left: 20px;
+        margin-top: 7px;
+
+        @media screen and (max-width: 500px) {
+            margin-left: 10px;
+            width: 150px;
+            margin-top: 0px;
+        }
+        
+    }
+    .right-area {
+        position: absolute;
+        right: 20px;
+        @media screen and (max-width: 500px) {
+            display: none;
+        }
+        a {
+            font-size: 18px;
+        }
+        button {
+            margin-left: 20px;
+        }
+
+        .responsive-menu {
+            display: none;
+            position: absolute;
+            right: 20px;
+            
+            @media screen and (max-width: 500px) {
+                display: block;
+            }
+        }
+    }
+}
