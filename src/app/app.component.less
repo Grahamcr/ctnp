@@ -52,13 +52,23 @@ body, html {
     } 
   } // End of Image Hero
 
+
 .information-bar  {
   padding-right: 30px;
   padding-left: 30px;
+  
   .left {
     color: @heading-gray;
-    @media screen and (max-width: 500px) {
-      width: 100%
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: left;
+    
+
+    @media screen and (max-width: 1100px) {
+      width: 100%;
+      margin-bottom: -30px;
     }
 
     span {
@@ -66,15 +76,45 @@ body, html {
     }
     h3 {
       font-weight: 400;
-      @media screen and (max-width: 500px) {
+      @media screen and (max-width: 800px) {
         font-size: 26px;
+      }
+      @media screen and (max-width: 1200px) {
+        font-size: 30px;
+      }
+    }
+    .inner-wrapper {
+      max-width: 600px;
+      padding-right: 40px;
+      padding-left: 40px;
+      @media screen and (max-width:1100px) {
+        max-width: none;
+        padding: 0px 50px;
       }
     }
   }
   .right {
     color: @light-gray;
-    @media screen and (max-width: 500px) {
-      width: 100%
+    width: 45%;
+    float:right;
+    padding-top: 25px;
+    float: left;
+    min-height: 250px; 
+
+    .inner-wrapper {
+      padding-left: 30px;
+      padding-right: 50px;
+      @media screen and (max-width: 1100px) {
+        padding: 0px 50px;
+      }
+    }
+    
+    @media screen and (max-width: 1200px) {
+      padding-top: 10px;
+    }
+    @media screen and (max-width: 1100px) {
+      width: 100%;
+      min-height: none;
     }
   }
 } // End of Information Bar
