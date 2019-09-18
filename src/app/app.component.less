@@ -435,3 +435,74 @@ body, html {
     }
   }
 }
+.challenge-bar {
+  margin-top: 100px;
+  .left {
+    width:50%;
+    float: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 100px;
+    hr {
+      color: @primary-color;
+      width: 285px;
+      float: left;
+      margin: 0px;
+      padding: 0px;
+      position: relative;
+      top: 60px;
+
+    }
+    .text-area {
+      width: 375px;
+      margin-left: 295px;
+      .top-heading {
+        font-size: 30px;
+        font-weight: 400;
+        margin-bottom: 0px;
+      }
+      h3 {
+        font-size: 42px;
+        font-weight: 600;
+        margin-top: 0px;
+      }
+    }
+  } // End of Left
+
+  .right {
+    width: 50%;
+    float:right;
+    .image-stat {
+      margin-bottom: 80px;
+
+      .circle-image {
+        width: 90px;
+        height: 90px;
+        border: 2px solid @primary-color;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        float:left;
+        margin-right: 15px;
+        img {
+          width: 55px;
+        }
+      }
+      .stat-area {
+        width: 100%;
+        .header {
+          font-size: 42px;
+          font-weight: 600;
+          margin-top: 0px;
+          margin-bottom: 0px;
+        }
+        .line {
+          font-size: 20px;
+          margin-top: 0px;
+        }
+      }
+    }
+  } // End of Right
+}
