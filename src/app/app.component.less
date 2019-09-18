@@ -1,7 +1,7 @@
 @primary-color: #8FBE00;
 @link-blue: #31A9FF;
 @heading-gray: #716B70;
-@light-gray: #666666;
+@light-gray: #444444;
 @primary-font: 'Source Sans Pro', sans-serif;
 
 body, html {
@@ -341,5 +341,97 @@ body, html {
   @media screen and (max-width: 500px) {
     font-size: 14px;
     margin-top: 35px;
+  }
+}
+.image-bar {
+  @height: 200px;
+  height: @height;
+  margin-top: 100px;
+  margin-bottom: 50px;
+  .info-image {
+    width:50%;
+    float:left;
+    @media screen and (max-width: 800px) {
+      width: 100%;
+      float: none;
+    }
+    .image-area {
+      width: 300px;
+      float: left;
+      height: @height;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #F8FBFD;
+
+      @media screen and (max-width: 1315px) {
+        width: 250px;
+      }
+      @media screen and (max-width: 1140px) {
+        width: 200px;
+      }
+      @media screen and (max-width: 1000px) {
+        width: 140px;
+      }
+      @media screen and (max-width: 800px) {
+        width:250px;
+      }
+      @media screen and (max-width: 600px) {
+        width: 200px;
+      }
+      @media screen and (max-width: 475px) {
+        width: 140px;
+      }
+      img {
+        width: 100%;
+      }
+    }
+    .text-area {
+      background-color: @light-gray;
+      color: #FFF;
+      height: @height;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      p {
+        font-size: 20px;
+        width:85%;
+        margin-left: 10px;
+
+        @media screen and (max-width: 1315px) {
+          font-size: 18px;
+        }
+
+        @media screen and (max-width: 1140px) {
+          font-size: 16px;
+        }
+        @media screen and (max-width: 1000px) {
+          font-size: 15px;
+        }
+        @media screen and (max-width: 800px) {
+          font-size: 18px;
+        }
+        @media screen and (max-width: 600px) {
+          font-size: 16px;
+        }
+        @media screen and (max-width: 475px) {
+          font-size: 15px;
+        }
+
+        span {
+          font-weight: 900;
+        }
+      }
+      a {
+        text-transform: uppercase;
+      }
+    }
+
+    &.right {
+      @media screen and (max-width: 800px) {
+        display: none;
+      }
+    }
   }
 }
