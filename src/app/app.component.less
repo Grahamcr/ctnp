@@ -437,6 +437,11 @@ body, html {
 }
 .challenge-bar {
   margin-top: 100px;
+
+  @media screen and (max-width: 900px) {
+    margin-top: -100px;
+  }
+
   .left {
     width:50%;
     float: left;
@@ -444,6 +449,11 @@ body, html {
     flex-direction: column;
     justify-content: center;
     padding-top: 100px;
+
+    @media screen and (max-width: 900px) {
+      width: 100%;
+      float: none;
+    }
     hr {
       color: @primary-color;
       width: 285px;
@@ -453,19 +463,70 @@ body, html {
       position: relative;
       top: 60px;
 
+      @media screen and (max-width: 1300px) {
+        width: 200px;
+      }
+      @media screen and (max-width: 1100px) {
+        width: 150px;
+      }
+      @media screen and (max-width: 900px) {
+        width: 30%;
+      }
+      @media screen and (max-width: 800px) {
+        width: 22%;
+      }
+      @media screen and (max-width: 670px) {
+        width: 16%;
+      }
+      @media screen and (max-width: 570px) {
+        width: 12%;
+      }
+      @media screen and (max-width: 400px) {
+        top:50px;
+      }
+
     }
     .text-area {
       width: 375px;
       margin-left: 295px;
+
+      @media screen and (max-width: 1300px) {
+        margin-left: 210px;
+      }
+      @media screen and (max-width: 1100px) {
+        margin-left: 160px;
+      }
+      @media screen and (max-width: 900px) {
+        margin-left: 30%;
+        padding-left: 10px;
+      }
+      @media screen and (max-width: 800px) {
+        margin-left: 22%;
+      }
+      @media screen and (max-width: 670px) {
+        margin-left: 16%;
+      }
+      @media screen and (max-width: 570px) {
+        margin-left: 12%;
+      }
+
       .top-heading {
         font-size: 30px;
         font-weight: 400;
         margin-bottom: 0px;
+
+        @media screen and (max-width: 400px) {
+          font-size: 25px;
+        }
       }
       h3 {
         font-size: 42px;
         font-weight: 600;
         margin-top: 0px;
+
+        @media screen and (max-width: 400px) {
+          font-size: 36px;
+        }
       }
     }
   } // End of Left
@@ -473,9 +534,25 @@ body, html {
   .right {
     width: 50%;
     float:right;
+
+    @media screen and (max-width: 900px) {
+      width: 500px;
+      float: none;
+      margin: 0 auto;
+      padding-top: 40px;
+    }
+
     .image-stat {
       margin-bottom: 80px;
-
+      @media screen and (max-width: 1600px) {
+        padding-left: 100px;
+      }
+      @media screen and (max-width: 1300px) {
+        padding-left: 50px;
+      }
+      @media screen and (max-width: 440px) {
+        padding-left: 10px;
+      }
       .circle-image {
         width: 90px;
         height: 90px;
@@ -486,8 +563,18 @@ body, html {
         border-radius: 50%;
         float:left;
         margin-right: 15px;
+
+        @media screen and (max-width: 1100px) {
+          width: 70px;
+          height: 70px;
+        }
+
         img {
           width: 55px;
+
+          @media screen and (max-width: 1100px) {
+            width: 45px;
+          }
         }
       }
       .stat-area {
@@ -501,6 +588,25 @@ body, html {
         .line {
           font-size: 20px;
           margin-top: 0px;
+        }
+
+        @media screen and (max-width: 1100px) {
+          .header {
+            font-size: 36px;
+          }
+          .line {
+            font-size: 16px;
+          }
+        }
+
+        @media screen and (max-width: 400px) {
+          .line {
+            font-size: 15px;
+            width: 340px;
+          }
+          .header {
+            font-size: 32px;
+          }
         }
       }
     }
