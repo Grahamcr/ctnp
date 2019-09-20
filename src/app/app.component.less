@@ -359,10 +359,11 @@ body, html {
       width: 300px;
       float: left;
       height: @height;
-      display: flex;
-      align-items: center;
-      justify-content: center;
       background-color: #F8FBFD;
+      display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 
       @media screen and (max-width: 1315px) {
         width: 250px;
@@ -383,7 +384,9 @@ body, html {
         width: 140px;
       }
       img {
-        width: 100%;
+        height: @height;
+        min-width: 300px;
+        
       }
     }
     .text-area {
