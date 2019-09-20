@@ -618,6 +618,9 @@ body, html {
 .product-grid {
   clear: both;
   background-color: @primary-color;
+  position: relative;
+  top: 40px;
+
   h2 {
     text-align: center;
     margin: 0 10%;
@@ -638,10 +641,55 @@ body, html {
       font-size: 26px;
     }
   }
+  .stc {
+    background-color: #FFF;
+    color: #333;
+    text-transform: uppercase;
+    font-size: 18px;
+    height: 50px;
+    width: 250px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    position: relative;
+    left: 50%;
+    margin-left: -125px;
+    z-index: 10;
+    border: 1px solid #ccc;
+    top: -20px;
+
+    &.second-position {
+      top: 70px;
+    }
+
+    @media screen and (max-width: 680px) {
+      font-size: 16px;
+      width: 200px;
+      height: 40px;
+      margin-left: -100px;
+
+      a {
+        margin-top: 8px;
+      }
+    }
+    a {
+      padding: 0px;
+      margin-top: 15px;
+      display: block;
+      color: @link-blue;
+
+      @media screen and (max-width: 680px) {
+        margin-top: 10px;
+      }
+    }
+  }
   .the-grid {
     background-color: @primary-color;
     width: 1580px;
     margin: 0 auto;
+    position: relative;
+
 
     .product-cell {
       position: relative;
