@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { MobileMenuComponent } from './mobile-menu/mobile-menu.component';
 import { InformationBarComponent } from './information-bar/information-bar.component';
+import { RedirectModalComponent } from './redirect-modal/redirect-modal.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     MobileMenuComponent,
-    InformationBarComponent
+    InformationBarComponent,
+    RedirectModalComponent
   ],
   imports: [
     BrowserModule,

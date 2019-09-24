@@ -1,3 +1,4 @@
+<app-redirect-modal *ngIf="showModal"></app-redirect-modal>
 <app-header></app-header>
 <app-mobile-menu *ngIf="showMenu"></app-mobile-menu>
 <div class="image-hero super">
@@ -11,7 +12,7 @@
           <br/>
           <br/>
           <br/>
-          <button class="large-button">FIND YOUR PERFECT SHIRT</button>
+          <button class="large-button" (click)="toggleModal()">FIND YOUR PERFECT SHIRT</button>
         </div> <!--text-area-->
         <div class="scroll-indicator">
             <img src="assets/images/down.svg"/>
