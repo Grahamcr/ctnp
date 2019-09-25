@@ -1,4 +1,4 @@
-<app-redirect-modal *ngIf="showModal"></app-redirect-modal>
+<app-redirect-modal *ngIf="showModal" [url]="url"></app-redirect-modal>
 <app-header></app-header>
 <app-mobile-menu *ngIf="showMenu"></app-mobile-menu>
 <div class="image-hero super">
@@ -12,15 +12,15 @@
           <br/>
           <br/>
           <br/>
-          <button class="large-button" (click)="toggleModal()">FIND YOUR PERFECT SHIRT</button>
+          <button class="large-button" (click)="toggleModal('https://www.google.com')">FIND YOUR PERFECT SHIRT</button>
         </div> <!--text-area-->
-        <div class="scroll-indicator">
+        <div (click)="scroll(target)" class="scroll-indicator">
             <img src="assets/images/down.svg"/>
         </div>
   </div><!-- End of Overlay -->
 </div><!-- end of image-hero-->
 
-<div class="container">
+<div class="container" id="target">
   <app-information-bar></app-information-bar>
 
   <div class="breaker-bar">
@@ -28,28 +28,28 @@
   </div>
 
   <div class="circle-bar">
-    <div (click)="toggleModal()" class="img-circle">
+    <div (click)="toggleModal('https://www.cnn.com')" class="img-circle">
       <div class="collection-wrapper">
         <p>Batman Adoption</p>
         <a href="#" >View All</a>
       </div>
       <img src="assets/images/shirt1.png"/>
     </div>
-    <div (click)="toggleModal()" class="img-circle">
+    <div (click)="toggleModal('https://www.bbc.com')" class="img-circle">
       <div class="collection-wrapper">
           <p>Vanquisher of Big Feelings</p>
           <a href="#">View All</a>
         </div>
       <img src="assets/images/shirt3.png"/>
     </div>
-    <div (click)="toggleModal()" class="img-circle">
+    <div (click)="toggleModal('https://www.cbs.com')" class="img-circle">
       <div class="collection-wrapper">
         <p>Love Makes A Family</p>
         <a href="#">View All</a>
       </div>
       <img src="assets/images/shirt2.png"/>
     </div>
-    <div (click)="toggleModal()" class="img-circle shirt4">
+    <div (click)="toggleModal('https://www.ge.com')" class="img-circle shirt4">
       <div class="collection-wrapper">
         <p>Just Mom</p>
         <a href="#">View All</a>
@@ -131,7 +131,7 @@
   <div class="product-grid">
     <h2> Ready to help change how the world thinks of fostering and adoption?</h2>
     <div class="stc">
-      <a>SHOP OUR COLLECTION</a>
+      <a (click)="toggleModal()">SHOP OUR COLLECTION</a>
     </div>
     <div class="the-grid">
       <div class="product-cell">
@@ -228,7 +228,7 @@
 
     <div class="call-2-action-row">
         <div class="stc second-position">
-          <a>See All Designs</a>
+          <a (click)="toggleModal()">See All Designs</a>
         </div>
     </div>
     

@@ -8,7 +8,7 @@
     position: fixed;
     left: 0px;
     top: 0px;
-    z-index: 99;
+    z-index: 9999;
     display: flex;
     align-content: center;
     justify-content: center;
@@ -26,10 +26,12 @@
             font-size: 30px;
             margin-top: 20px;
             margin-left: 20px;
+            margin-right: 20px;
         }
         p {
             margin-left: 20px;
             font-size: 16px;
+            margin-right: 20px;
         }
         .very-large-btn {
             margin-top: 90px;
@@ -45,10 +47,27 @@
             position: relative;
             left: 50%;
             margin-left: -150px;
+            text-decoration: none;
 
             img {
                 width: 200px;
             }
+
+            &:hover {
+                background-color: #00b2a5;
+                color: #FFF;
+
+                img {
+                    filter: invert(100%) brightness(500%) contrast(97%);
+                }
+            }
+
+            @media screen and (max-width: 650px) {
+                width: 250px;
+                margin-left: -125px;
+                margin-top: 60px;
+            }
+
         }
 
         .bottom-bar {
@@ -62,13 +81,39 @@
             .what {
                 color: @link-blue;
                 font-weight: 500;
+                cursor: pointer;
+
+                &:hover {
+                    color: #0093fd;
+                }
+
+                @media screen and (max-width: 650px) {
+                    display: none;
+                }
             }
             .cancel {
                 font-weight: 500;
                 position: absolute;
                 right: 40px;
                 color: red;
+                cursor: pointer;
+
+                &:hover {
+                    color: darkred;
+                }
             }
+
+            @media screen and (max-width: 650px) {
+                bottom: 20px;
+            }
+
+        }
+
+        @media screen and (max-width: 650px) {
+            width: 300px;
+            height: 475px;
+            margin-top: 50px;
+            margin-left: 20px;
         }
     }
 }

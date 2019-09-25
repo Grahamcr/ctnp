@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy, Input } from '@angular/core';
 import { ModalService } from '../modal-service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-redirect-modal',
@@ -7,6 +8,9 @@ import { ModalService } from '../modal-service';
   styleUrls: ['./redirect-modal.component.less']
 })
 export class RedirectModalComponent implements OnInit {
+
+  private urlSub: Subscription;
+  @Input() url: string;
 
   constructor(private modalService: ModalService) { }
 
@@ -16,5 +20,6 @@ export class RedirectModalComponent implements OnInit {
   hideModal() {
     this.modalService.modalEmitter.next(false);
   }
+
 
 }
