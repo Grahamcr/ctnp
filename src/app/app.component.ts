@@ -26,25 +26,16 @@ export class AppComponent implements OnInit, OnDestroy {
     });
 
     this.modalSub = this.modalService.modalEmitter.subscribe(value => {
-      this.showModal = value;
+      this.showModal = value.getShowModal();
+      this.url = value.getUrl();
     });
   }
   ngOnDestroy(): void {
     this.menuSub.unsubscribe();
     this.modalSub.unsubscribe();
   }
+
   toggleResponsiveMenu() {
-    return !this.showMenu;
-  }
-
-  toggleModal(url: string) {
-    this.url = url;
-    this.modalService.modalEmitter.next(true);
-  }
-
-  scroll(el: HTMLElement) {
-    let element = document.getElementById('target');
-    element.scrollIntoView({behavior: 'smooth'});
-    el.scrollIntoView();
+    this.showMenu = !this.showMenu;
   }
 }

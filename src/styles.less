@@ -1,6 +1,10 @@
 @primary-color: #8FBE00;
 @link-blue: #31A9FF;
+@primary-font: 'Source Sans Pro', sans-serif;
 
+body, html {
+  font-family: @primary-font;
+}
 a, button {
   cursor: pointer;
 }
@@ -108,3 +112,162 @@ h1 {
       color: @link-blue;
     }
   }
+
+  .image-hero {
+    width:100%;
+    height: 95vh;
+    margin-top: -40px;
+
+    @media screen and (max-width: 800px) {
+        margin-top:-25px;
+    }
+    @media screen and (max-width: 600px) {
+      margin-top:-22px;
+  }
+    &.super {
+      background: url(./assets/images/super.jpg) no-repeat center center fixed; 
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+    }
+
+    &.happy {
+      background: url(./assets/images/happy.jpg) no-repeat center center fixed; 
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+    }
+
+    .overlay {
+      background-color: rgba(255, 255, 255, .5);
+      height: 95vh;
+      .text-area {
+        position: relative;
+        top: 20vh;
+        margin-left: 20px;
+        #top-line, #bottom-line {
+          color: @primary-color;
+        }
+        #top-line {
+          width:140px;
+          float:left;
+          position: relative;
+          top: 20px;
+          margin-right: 5px;
+
+        }
+        h2 {
+          margin-bottom: -20px;
+        }
+        h1 {
+          margin-left: 145px;
+          margin-top: 0px;
+          float:left;
+          margin-bottom: 0px;
+          padding-bottom: 0px;
+        }
+        #bottom-line {
+          margin-left: 5px;
+          position: relative;
+          top: 35px;
+        }
+        button {
+          clear: both;
+          margin-left: 145px;
+          cursor: pointer;
+        }
+    
+        @media screen and (max-width: 1000px) {
+          #top-line {
+            width:75px;
+          }
+          h1, h2, button {
+            margin-left: 75px;
+          }
+        }
+
+        @media screen and (max-width: 800px) {
+          #top-line {
+            width: 50px;
+            top: 10px;
+          }
+          #bottom-line {
+            top: 25px;
+          }
+          h1, h2, button {
+            margin-left: 50px;
+          }
+          h1 {
+            font-size: 50px;
+          }
+          h2 {
+            font-size: 30px;
+            margin-bottom: -10px;
+          }
+          button {
+            position: relative;
+            top: -20px;
+            font-size: 16px;
+            width:230px;
+            height:50px;
+          }
+        }
+        
+        @media screen and (max-width: 600px) {
+  
+          h2 {
+            font-size: 25px;
+          }
+          h1 {
+            font-size: 40px;
+          }
+          #bottom-line {
+            top:20px;
+          }
+          button {
+            top: -40px;
+            font-size: 14px;
+            width:200px;
+            height:45px;
+            cursor: pointer;
+          }
+        }
+        @media screen and (max-width: 500px) {
+          #top-line {
+            display: none;
+          }
+          h1, h2, button {
+            margin-left: 5px;
+          }
+        }
+        @media screen and (max-width: 430px) {
+          h1 {
+            width:220px;
+            line-height: 38px;
+            margin-top: 8px;
+          }
+          #bottom-line {
+            top: 58px;
+            margin-left: 0px;
+          }
+          button {
+            top:0px;
+            cursor: pointer;
+          }
+        }
+    }
+    .scroll-indicator {
+      text-align: center;
+      img {
+        width:70px;
+        position: absolute;
+        bottom: 10vh;
+        left: 50%;
+        margin-left: -35px;
+        cursor: pointer;
+      }
+    } 
+  }
+} // End of Image Hero

@@ -7,6 +7,8 @@ import { HeaderComponent } from './header/header.component';
 import { MobileMenuComponent } from './mobile-menu/mobile-menu.component';
 import { InformationBarComponent } from './information-bar/information-bar.component';
 import { RedirectModalComponent } from './redirect-modal/redirect-modal.component';
+import { AboutComponent } from './about/about.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { RedirectModalComponent } from './redirect-modal/redirect-modal.componen
     HeaderComponent,
     MobileMenuComponent,
     InformationBarComponent,
-    RedirectModalComponent
+    RedirectModalComponent,
+    AboutComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
