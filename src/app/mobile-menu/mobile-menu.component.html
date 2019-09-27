@@ -3,7 +3,7 @@
         <img (click)="hideMenu()" src="assets/images/close.svg"/>
     </div>
     <div class="menu">
-        <a>Visit Our Store</a>
-        <a>About Us</a>
+        <a (click)="showModal()">Visit Our Store</a>
+        <a [routerLink] = "'/about'">About Us</a>
     </div>
 </div>

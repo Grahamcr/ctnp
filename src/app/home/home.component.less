@@ -63,9 +63,10 @@ body, html {
     @media screen and (max-width: 650px) {
       font-size: 30px;
       margin-top: -15px;  
-      width: 285px;
-      margin-left: -142px;
-
+      width: 100%;
+      text-align: center;
+      margin-left: 0px;
+      left: 0px;
     }
   }
   #right {
@@ -85,9 +86,10 @@ body, html {
   @media screen and (max-width: 500px) {
     width:80%;
     margin-left: 10%;
+    margin-top: 40px !important;
   }
   @media screen and (max-width:700px) {
-    margin-top: 50px;
+    margin-top: 50px !important;
   }
 
   @media screen and (max-width:1050px) {
@@ -474,10 +476,27 @@ body, html {
     float:right;
 
     @media screen and (max-width: 900px) {
-      width: 500px;
+      width: 100%;
       float: none;
-      margin: 0 auto;
+      position: relative;
+      left:23%;
       padding-top: 40px;
+    }
+
+    @media screen and (max-width: 800px) {
+      left: 18%;
+    }
+
+    @media screen and (max-width: 670px) {
+      left: 10%;
+    }
+
+    @media screen and (max-width: 570px) {
+      left: 6%;
+    }
+
+    @media screen and (max-width: 500px) {
+      left: 0%;
     }
 
     .image-stat {
