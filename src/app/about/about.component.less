@@ -1,16 +1,95 @@
 @heading-gray: #333333;
 @light-gray: #666666;
+
 .information-bar  {
     padding-right: 30px;
     padding-left: 30px;
     
+    .left, .right {
+        .inner-wrapper.second-text {
+            @media screen and (max-width: 500px) {
+                margin-top: 50px;
+            }
+        }
+        .inner-wrapper {
+            @media screen and (max-width: 450px) {
+                h2 {
+                    font-size: 30px;
+                    margin-bottom: 35px;
+                }
+            }
+        }
+    }
     &.about-content {
+        height: 300px;
+        .right.has-image {
+            .inner-wrapper {
+                @media screen and (max-width: 1100px) {
+                    display: none;
+                }
+            }
+        }
         .left, .right {
-            h2 {
-                font-weight: 300;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .inner-wrapper {
+                max-width: 600px;
+
+                h2 {
+                    font-weight: 300;
+                    position: relative;
+                    top: 30px;
+                }
+                img {
+                    height: 300px;
+                }
+
+            }
+        }
+        .left.has-image {
+
+            .inner-wrapper {
                 position: relative;
                 top: 30px;
+                img {
+                    @media screen and (max-width: 1320px) and (min-width: 1200px) {
+                        position: absolute;
+                        top: 60px;   
+                        left: -700px; 
+                    }
+                    
+                }
             }
+        }
+        .right.no-image {
+            .inner-wrapper {
+                @media screen and (max-width: 1320px) and (min-width: 1200px) {
+                    position: absolute;
+                    top: 340px;   
+                    left: 50%; 
+                } 
+            }
+        }
+    }
+    &.first-section {
+        margin-bottom: 430px;
+        position: relative;
+        top: 40px;
+
+        @media screen and (max-width: 1100px) {
+            position: relative;
+            top: -100px;
+        }
+
+        @media screen and (max-width: 780px) {
+            position: relative;
+            top: -50px;
+        }
+
+        @media screen and (max-width: 500px) {
+            position: relative;
+            top: 50px;
         }
     }
     .left {
