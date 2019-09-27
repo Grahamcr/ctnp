@@ -25,9 +25,8 @@ export class HomeComponent implements OnInit {
     this.modalService.modalEmitter.next(new Redirect(true, url));
   }
 
-  scroll(el: HTMLElement) {
+  scroll() {
     let element = document.getElementById('target');
     element.scrollIntoView({behavior: 'smooth'});
-    el.scrollIntoView();
   }
 }
