@@ -40,14 +40,21 @@
     }
     .rmenu {
         position: absolute;
-        right: -30px;
+        right: 130px;
         top: 0px;
-        img {
-            height: 50px;
-            fill: @primary-color;
-            cursor: pointer;
-        }
+        a {
+            display: block;
 
+            text-align: right;
+            left: -30px;
+            position: absolute;
+            img {
+                height: 50px;
+                fill: @primary-color;
+                cursor: pointer;
+            }
+        }
+        
         @media screen and (min-width: 500px) {
             display: none;
         }
