@@ -4,6 +4,7 @@
     </div>
     <div class="menu">
         <a (click)="showModal()">Visit Our Store</a>
-        <a [routerLink] = "'/about'">About Us</a>
+        <a (click)="hideMenu()" [routerLink] = "'/'">Home</a>
+        <a (click)="hideMenu()" [routerLink] = "'/about'">About Us</a>
     </div>
 </div>

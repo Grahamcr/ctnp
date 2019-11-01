@@ -7,6 +7,7 @@ import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [{path: 'about', component: AboutComponent},
                         {path: 'home', component: HomeComponent},
+                        {path: 'ctnp', component: HomeComponent},
                         {path: '', component: HomeComponent, pathMatch: 'full'}];
 
 // const routes: Routes = [];
