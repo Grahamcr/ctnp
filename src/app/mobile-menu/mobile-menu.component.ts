@@ -19,7 +19,7 @@ export class MobileMenuComponent implements OnInit {
     this.menuService.menuEmitter.next(false);
   }
   showModal() {
-    this.modalService.modalEmitter.next(new Redirect(true, 'https://www.google.com'));
+    this.modalService.modalEmitter.next(new Redirect(true, 'https://shop.spreadshirt.com/change-the-narrative-project/'));
   }
 
 }

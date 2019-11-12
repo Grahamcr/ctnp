@@ -20,6 +20,6 @@ export class HeaderComponent implements OnInit {
   }
 
   showModal() {
-    this.modalService.modalEmitter.next(new Redirect(true, 'https://google.com'));
+    this.modalService.modalEmitter.next(new Redirect(true, 'https://shop.spreadshirt.com/change-the-narrative-project/'));
   }
 }

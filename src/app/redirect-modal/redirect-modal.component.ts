@@ -16,6 +16,7 @@ export class RedirectModalComponent implements OnInit {
   constructor(private modalService: ModalService) { }
 
   ngOnInit() {
+    // this.url = 'https://shop.spreadshirt.com/change-the-narrative-project/';
   }
 
   hideModal() {

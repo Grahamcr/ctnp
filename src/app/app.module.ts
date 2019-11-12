@@ -9,6 +9,7 @@ import { InformationBarComponent } from './information-bar/information-bar.compo
 import { RedirectModalComponent } from './redirect-modal/redirect-modal.component';
 import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
+import { ShopComponent } from './shop/shop.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { HomeComponent } from './home/home.component';
     InformationBarComponent,
     RedirectModalComponent,
     AboutComponent,
-    HomeComponent
+    HomeComponent,
+    ShopComponent
   ],
   imports: [
     BrowserModule,
